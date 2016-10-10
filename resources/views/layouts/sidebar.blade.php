@@ -34,7 +34,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="treeview-menu">
           <a href="/registration">
             <i class="fa fa-files-o"></i>
             <span>Registration</span>
@@ -60,10 +60,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <ul class="treeview-menu">
             <li><a href="/absence">Report an Absence</a></li>
             <li><a href="/attendance">View Attendance Record</a></li>
-          </ul>
           </ul>
         </li>
         <li class="treeview">
@@ -92,7 +90,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="/annualupdate">
+          <a href="#">
             <i class="fa fa-table"></i> <span>Annual Detail Checker</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -171,10 +169,6 @@
           </ul>
         </li>
         <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
