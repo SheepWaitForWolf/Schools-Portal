@@ -2,10 +2,13 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        @yield('Title')
-        
-      </h1>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8">      
+      <h2>
+        @yield('Title')        
+      </h2>
+    </div>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
@@ -18,6 +21,8 @@
       @yield('Content')
 
       @yield('Form')
+
+      @yield('Modal')
 
     </section>
     <!-- /.content -->
