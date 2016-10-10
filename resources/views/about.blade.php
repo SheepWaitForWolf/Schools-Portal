@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('Title')
-About
+About myaccount
 @stop
 
 @section('Content')

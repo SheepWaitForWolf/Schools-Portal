@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Form;
 
 use Illuminate\Http\Request;
-use App\Models\ChildRecord;
+use App\Models\Child;
 use App\Models\Feedback;
 use App\Models\LocalAuthority;
 use App\Models\Absence;
@@ -24,7 +24,7 @@ class ServicesController extends Controller
     
 
 	public function getRegistrationPage() {
-        $children = ChildRecord::all();
+        $children = Child::all();
         
         return view('registration')->with('children', $children);
     }

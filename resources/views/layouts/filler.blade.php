@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        About myaccount
+        @yield('Title')
         
       </h1>
       <ol class="breadcrumb">
@@ -16,6 +16,8 @@
     <section class="content">
 
       @yield('Content')
+
+      @yield('Form')
 
     </section>
     <!-- /.content -->

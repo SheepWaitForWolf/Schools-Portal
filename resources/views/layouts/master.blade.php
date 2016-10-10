@@ -16,9 +16,7 @@
         
             @include('layouts.filler')
         
-        <br>
-            @yield('Form')
-        <br>
+    
         <div>
             @yield('List')
         </div>
