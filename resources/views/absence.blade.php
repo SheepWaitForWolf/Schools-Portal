@@ -34,7 +34,6 @@ var request = $.ajax({
 	<div class="col-lg-2">
 	</div>
 	<div class="col-lg-10">
-		<h3>Report an Absence</h3>
 	</div>
 </div>
 <br>
