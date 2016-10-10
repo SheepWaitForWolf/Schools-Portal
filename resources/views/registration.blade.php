@@ -19,6 +19,31 @@ Registration
 @endsection
 
 @section('Form')
+  <div class="col-lg-3">
+<div class="box box-solid box-success">
+  <div class="box-header with-border">
+    <h3 class="box-title">Child Added</h3>
+    <div class="box-tools pull-right">
+      <!-- Buttons, labels, and many other things can be placed here! -->
+      <!-- Here is a label for example -->
+      <span class="label label-primary">#1</span>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body">
+    <ul class="list-unstyled">
+      <li>Name : </li>
+      <li>Gender : </li>
+      <li>School : </li>
+      <li>Class : </li>
+      <li>Attendance : </li>
+    </ul>
+  </div><!-- /.box-body -->
+  <div class="box-footer">
+    The footer of the box
+  </div><!-- box-footer -->
+</div><!-- /.box -->
+ </div>
+
 <div class="row">
   <div class="col-lg-2">
   </div>
