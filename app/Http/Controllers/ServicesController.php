@@ -31,11 +31,10 @@ class ServicesController extends Controller
 
      public function getEnrolmentPage() {
         $authorities = LocalAuthority::all();
-        $enrolments = Enrolment::all();
         $absences = Absence::all();
-        $schools = DB::select('SELECT school_name FROM schools WHERE local_authority_id = :id', ['id' => 1]);
+        $schools = DB::select('SELECT school_name FROM portal_schools_mst WHERE local_authority_id = :id', ['id' => 1]);
         $response = $schools;
-    	return view('enrol')->with('enrolments', $enrolments)->with('authorities', $authorities)->with('absences', $absences)->with('schools', $schools)->with('response', $response);
+    	return view('enrol')->with('authorities', $authorities)->with('absences', $absences)->with('schools', $schools)->with('response', $response);
     }
 
     public function getSchools(Request $request){
@@ -44,7 +43,7 @@ class ServicesController extends Controller
         $absences = Absence::all();
         $id = intval($id = $request->d);
         $la_name = LocalAuthority::find($id)->la_name;
-        $schools = DB::select('SELECT school_name FROM schools WHERE local_authority_id = :id', ['id' => $id]);
+        $schools = DB::select('SELECT school_name FROM portal_schools_mst WHERE local_authority_id = :id', ['id' => $id]);
         $response = Response::make($schools, "200");
         $response->header('Content-Type', 'text/json');
         return $response;
@@ -55,7 +54,7 @@ class ServicesController extends Controller
 
         $authorities = LocalAuthority::all();
         $absences = Absence::all();
-        $schools = DB::select('SELECT school_name FROM schools WHERE local_authority_id = :id', ['id' => 1]);
+        $schools = DB::select('SELECT school_name FROM portal_schools_mst WHERE local_authority_id = :id', ['id' => 1]);
         $response = $schools;
     	return view('absence')->with('authorities', $authorities)->with('absences', $absences)->with('schools', $schools)->with('response', $response);
     }
@@ -125,7 +124,7 @@ class ServicesController extends Controller
 
      public function postRegistrationPage(Request $request)
     {
-        $childrecord = new ChildRecord;
+        $childrecord = new Child;
         $childrecord->f_name = $request->f_name;
         $childrecord->l_name = $request->l_name;
         $childrecord->gender = $request->gender;

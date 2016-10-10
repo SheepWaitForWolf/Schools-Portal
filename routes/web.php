@@ -61,3 +61,62 @@ Route::get('/results', ['uses'=>'ServicesController@getResultsPage','as'=>'get.s
 Route::get('/schoolmeals', ['uses'=>'ServicesController@getSchoolMealsPage','as'=>'get.services.showSchoolMealsPage']);
 
 Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.services.getSchools']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Services POST Routes
+|--------------------------------------------------------------------------
+*/
+Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@postRegistrationPage','as'=>'post.services.postRegistrationPage']);
+
+Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
+
+
+Route::post('/absence/{absence_id?}', ['uses'=>'ServicesController@postAbsencePage','as'=>'post.services.postAbsencePage']);
+
+Route::post('/feedback', ['uses'=>'ServicesController@postFeedbackPage','as'=>'post.services.postFeedbackPage']);
+
+
+Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackPage','as'=>'get.services.getFeedbackPage']);
+
+
+Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
+
+Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateRegistrationPage','as'=>'put.services.updateRegistrationPage']);
+Auth::routes();
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Services DELETE Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::delete('registration/{child_id?}', ['uses'=>'ServicesController@deleteRegistrationPage','as'=>'delete.services.deleteRegistrationPage']);
+
+Route::delete('feedback/{feedback_id?}', ['uses'=>'ServicesController@deleteFeedbackPage','as'=>'delete.services.deleteFeedbackPage']);
+
+Route::delete('absence/{absence_id?}', ['uses'=>'ServicesController@deleteAbsencePage','as'=>'delete.services.deleteAbsencePage']);
+
+Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentPage','as'=>'delete.services.deleteEnrolmentPage']);
+
+/*
+|--------------------------------------------------------------------------
+| SimpleSAML based Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
+
+
+
+
+
+Route::get('/mail', function () {
+    // send an email to myself
+    Mail::to('dglennie89@gmail.com')->send(new AccountCreated);
+
+    return view('welcome');
+});

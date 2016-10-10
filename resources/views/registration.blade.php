@@ -19,6 +19,8 @@ Registration
 @endsection
 
 @section('Form')
+
+
   <div class="col-lg-3">
 <div class="box box-solid box-success">
   <div class="box-header with-border">
@@ -32,6 +34,7 @@ Registration
   <div class="box-body">
     <ul class="list-unstyled">
       <li>Name : </li>
+      <li>Date of Birth : </li>
       <li>Gender : </li>
       <li>School : </li>
       <li>Class : </li>
@@ -43,6 +46,7 @@ Registration
   </div><!-- box-footer -->
 </div><!-- /.box -->
  </div>
+
 
 <div class="row">
   <div class="col-lg-2">
