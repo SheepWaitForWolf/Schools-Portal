@@ -4,17 +4,18 @@
     <head>
 @include('layouts.head')
     </head>
-    <body>
+    <body class="hold-transition skin-blue sidebar-mini">
 
-        @include('layouts.header')
-        <div class="flex-center position-ref full-height">
+    <div class="wrapper">
+            @include('layouts.header')
 
 
-        </div>
+            @include('layouts.sidebar')
 
-        <div>
-            @yield('Content')
-        </div>
+
+        
+            @include('layouts.filler')
+        
         <br>
             @yield('Form')
         <br>
@@ -29,6 +30,10 @@
         </div>
 
 
+
+
+</div>
+<!-- ./wrapper -->
 @include('layouts.footer')
     </body>
 </html>
