@@ -16,7 +16,7 @@
             @yield('Content')
         </div>
         <br>
-        @yield('Form')
+            @yield('Form')
         <br>
         <div>
             @yield('List')

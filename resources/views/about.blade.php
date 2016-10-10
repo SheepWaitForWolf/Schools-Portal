@@ -4,6 +4,7 @@
 About
 @stop
 
+@section('Content')
 <br>
 <br>
 <div class="container">
@@ -27,4 +28,5 @@ Provided by the Improvement Service and funded by the Scottish Government, it is
    organisations across Scotland a shared, secure method of verifying who you are online.</p>
 </div>
 </div>
+@stop
 
