@@ -59,3 +59,5 @@ Route::get('/annualupdate', ['uses'=>'ServicesController@getAnnualUpdatePage','a
 Route::get('/results', ['uses'=>'ServicesController@getResultsPage','as'=>'get.services.showResultsPage']);
 
 Route::get('/schoolmeals', ['uses'=>'ServicesController@getSchoolMealsPage','as'=>'get.services.showSchoolMealsPage']);
+
+Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.services.getSchools']);

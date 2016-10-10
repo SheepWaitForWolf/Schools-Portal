@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="/registration">
             <i class="fa fa-files-o"></i>
             <span>Registration</span>
             <span class="pull-right-container">
@@ -44,7 +44,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="/enrol">
             <i class="fa fa-th"></i> <span>Enrolment</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -52,7 +52,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="/absence">
             <i class="fa fa-pie-chart"></i>
             <span>Absence Record</span>
             <span class="pull-right-container">
@@ -67,7 +67,7 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="/schoolmeals">
             <i class="fa fa-laptop"></i>
             <span>School Meals</span>
             <span class="pull-right-container">
@@ -84,7 +84,7 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="/results">
             <i class="fa fa-edit"></i> <span>View Exam Results</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -92,8 +92,8 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Annual Update Checker</span>
+          <a href="/annualupdate">
+            <i class="fa fa-table"></i> <span>Annual Detail Checker</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
