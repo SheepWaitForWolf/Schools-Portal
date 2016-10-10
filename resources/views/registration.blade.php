@@ -28,7 +28,7 @@ Register Children
     <div class="box-tools pull-right">
       <!-- Buttons, labels, and many other things can be placed here! -->
       <!-- Here is a label for example -->
-      <span class="label label-primary">#1</span>
+      <span class="label label-primary">#{{$child->child_id}}</span>
     </div><!-- /.box-tools -->
   </div><!-- /.box-header -->
   <div class="box-body">
@@ -40,10 +40,13 @@ Register Children
       <li>Attendance : </li>
     </ul>
   </div><!-- /.box-body -->
+
   <div class="box-footer">
-    <button class="btn btn-warning btn-xs btn-detail open-modal" value={{$child->child_id}}>Edit</button>
-    <button class="btn btn-danger btn-xs btn-delete delete-child" value={{$child->child_id}}>Delete</button>
+
+    <button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{$child->child_id}}>Edit</button>
+    <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{$child->child_id}}>Delete</button>
   </div><!-- box-footer -->
+
 </div><!-- /.box -->
  </div>
  @endforeach 
