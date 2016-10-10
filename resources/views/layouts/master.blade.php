@@ -16,22 +16,9 @@
         
             @include('layouts.filler')
         
-    
-        <div>
-            @yield('List')
-        </div>
-        <div>
-            @yield('Filter')
-        </div>
-          <div>
-            @yield('Modal')
-        </div>
-
-
-
 
 </div>
 <!-- ./wrapper -->
-@include('layouts.footer')
+
     </body>
 </html>
