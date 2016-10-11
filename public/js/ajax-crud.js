@@ -34,7 +34,7 @@ $(document).ready(function(){
             type: "DELETE",
             url: url + "/" + child_id,
             success: function (data) {
-                console.log(data);
+                // console.log(data);
 
                 $("#child" + child_id).remove();
             },

@@ -166,8 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-
-        //
+         Collective\Html\HtmlServiceProvider::class,
+         Laravel\Scout\ScoutServiceProvider::class,
 
         /*
          * Application Service Providers...

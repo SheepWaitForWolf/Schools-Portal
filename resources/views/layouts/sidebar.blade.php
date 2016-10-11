@@ -27,7 +27,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
+          <a href="/user">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -44,8 +44,8 @@
           </a>
         </li>
         <li>
-          <a href="/enrol">
-            <i class="fa fa-th"></i> <span>Enrolment</span>
+          <a href="/registration">
+            <i class="fa fa-th"></i> <span>Registration</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>

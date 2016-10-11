@@ -29,13 +29,6 @@ class ServicesController extends Controller
         return view('registration')->with('children', $children);
     }
 
-     public function getEnrolmentPage() {
-        $authorities = LocalAuthority::all();
-        $absences = Absence::all();
-        $schools = DB::select('SELECT school_name FROM portal_schools_mst WHERE local_authority_id = :id', ['id' => 1]);
-        $response = $schools;
-    	return view('enrol')->with('authorities', $authorities)->with('absences', $absences)->with('schools', $schools)->with('response', $response);
-    }
 
     public function getSchools(Request $request){
         
@@ -134,7 +127,7 @@ class ServicesController extends Controller
 
         return $this->getRegistrationPage();
 
-        return redirect()->route('get.services.getRegistrationPage');
+        // return view('registration');
 
 
         
@@ -159,7 +152,7 @@ class ServicesController extends Controller
 
      public function updateRegistrationPage(Request $request)
     {
-        $childrecord = ChildRecord::find($request->id);
+        $childrecord = Child::find($request->id);
         $childrecord->f_name = $request->f_name;
         $childrecord->l_name = $request->l_name;
         $childrecord->gender = $request->gender;
@@ -168,16 +161,19 @@ class ServicesController extends Controller
 
         return $this->getRegistrationPage();
 
-        return redirect()->route('get.services.RegistrationPage');
+        return redirect()->route('get.services.getRegistrationPage');
 
         
     }
 
     public function deleteRegistrationPage($id){
 
-       $childrecord = ChildRecord::find($id);
+       $childrecord = Child::find($id);
        $childrecord->delete();
-       return;
+
+        return $this->getRegistrationPage();
+
+        return redirect()->route('get.services.getRegistrationPage');
     }
 
     public function deleteAbsencePage($id){
@@ -187,10 +183,4 @@ class ServicesController extends Controller
        return;
     }
 
-    public function deleteEnrolmentPage($id){
-
-       $enrolmentrecord = Enrolment::find($id);
-       $enrolmentrecord->delete();
-       return;
-    }
 }
