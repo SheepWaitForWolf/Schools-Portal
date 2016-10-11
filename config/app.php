@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'myaccount School Portal',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,8 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-
-        //
+         Collective\Html\HtmlServiceProvider::class,
+         Laravel\Scout\ScoutServiceProvider::class,
 
         /*
          * Application Service Providers...

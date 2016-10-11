@@ -10,6 +10,7 @@ Report an Absence
 <script>
 function changela(val) {
 
+
 var request = $.ajax({
       url: "{!! URL::route('get.services.getSchools')!!}",
       type: "GET", 
@@ -19,6 +20,7 @@ var request = $.ajax({
 
 
     request.done(function(msg) {
+
       $('#fillable').empty();
       for (var i in msg) {
       $('#fillable').append("<option value=" + msg[i].school_name + ">" + msg[i].school_name + "</option>");
@@ -57,7 +59,7 @@ var request = $.ajax({
         <select class="form-control" name="la" id="la" onchange="changela(this.value)">
           <option value="Choose your Local Authority">Choose your Local Authority</option>
           @foreach($authorities as $authority)
-          <option value="{{$authority->local_authority_id}}">{{ $authority->la_name }}</option>
+          <option value="{{$authority->la_id}}">{{ $authority->la_name }}</option>
           @endforeach
         </select>
       </div>

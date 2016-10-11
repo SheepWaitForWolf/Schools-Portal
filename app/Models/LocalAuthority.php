@@ -8,7 +8,7 @@ class LocalAuthority extends Model
 {
     protected $table = 'portal_local_authorities_mst';
 
-    protected $primaryKey = 'local_authority_id';
+    protected $primaryKey = 'la_id';
 
 	public $timestamps = true;
 
