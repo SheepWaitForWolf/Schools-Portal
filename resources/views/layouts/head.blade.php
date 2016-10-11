@@ -25,9 +25,9 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="./dist/app.js"></script>
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/ajax-crud.js"></script>
 <script type="text/javascript" src="./js/absence-crud.js"></script>
 <script type="text/javascript" src="./js/feedback-crud.js"></script>
-<script type="text/javascript" src="./js/active.js"></script>
