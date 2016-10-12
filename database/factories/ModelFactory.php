@@ -16,8 +16,20 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
+        'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Models\Enrolment::class, function (Faker\Generator $faker) {
+    
+    return [
+        'f_name' => $faker->firstName,
+        'l_name' => $faker->lastName,
+        'la' => $faker->company,
+        'school' => $faker->company,
+        'year_of_study' => $faker->numberBetween($min = 1, $max = 13),
+        'academic_year' => $faker->year($max = 'now')
+    ];
+});
+
