@@ -35,4 +35,6 @@
 <script type="text/javascript" src="./js/ajax-crud.js"></script>
 <script type="text/javascript" src="./js/absence-crud.js"></script>
 <script type="text/javascript" src="./js/feedback-crud.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
 <!-- <script type="text/javascript" src="/js/app.js"></script> -->

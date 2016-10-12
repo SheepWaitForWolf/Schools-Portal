@@ -12,7 +12,6 @@
 
             @include('layouts.sidebar')
 
-
             @include('layouts.filler')
         
 
