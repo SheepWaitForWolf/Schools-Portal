@@ -12,31 +12,34 @@ $(document).ready(function(){
             $('#child_id').val(data.child_id);
             $('#f_name').val(data.f_name);
             $('#l_name').val(data.l_name);
-             $('#btn-save').val("update");
+             $('#btn-save').attr('value', child_id);
 
             $('#myModal').modal('show');
         }) 
     });
 
     //delete child and remove it from list
-    $('.delete-child').click(function(){
+    $('.delete-child').on('click', function(){
         var child_id = $(this).val();
+        console.log(child_id);
+        var delete_url = url + "/" + child_id;
+        console.log(delete_url);
     
-    $.ajaxPrefilter(function(options, originalOptions, xhr) { // this will run before each request
-        var token = $('meta[name="csrf-token"]').attr('content'); // or _token, whichever you are using
-
-        if (token) {
-            return xhr.setRequestHeader('X-CSRF-TOKEN', token); // adds directly to the XmlHttpRequest Object
-        }
-    });
+ $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        })
         $.ajax({
 
             type: "DELETE",
-            url: url + "/" + child_id,
+            url: delete_url,
             success: function (data) {
-                // console.log(data);
 
                 $("#child" + child_id).remove();
+                //call some new function that renders the view again
+                // console.log(data);
+                document.write(data);
             },
             error: function (data) {
                 console.log('Error:', data);
@@ -46,15 +49,17 @@ $(document).ready(function(){
 
     //create new child / update existing child
     $("#btn-save").click(function (e) {
-        console.log($(this));
+        // console.log($(this));
+                e.preventDefault(); 
         var child_id = $(this).val();
+        console.log("Hello" + child_id);
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         })
 
-        e.preventDefault(); 
+
 
         var formData = {
             child_id: $('#child_id').val(),
@@ -81,14 +86,14 @@ $(document).ready(function(){
             data: formData,
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+                // console.log(data);
 
-                var child = '<tr id="child' + data.id + '"><td>' + data.id + '</td><td>' + data.child + '</td><td>' + data.l_name + '</td><td>' + data.created_at + '</td>';
-                child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
-                child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
+                // var child = '<tr id="child' + data.id + '"><td>' + data.id + '</td><td>' + data.child + '</td><td>' + data.l_name + '</td><td>' + data.created_at + '</td>';
+                // child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
+                // child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
 
                 if (state == "add"){ //if user added a new record
-                    $('#children-list').append(child);
+                    $('#child-list').append(child);
                 }else{ //if user updated an existing record
 
                     $("#child" + child_id).replaceWith( child );
