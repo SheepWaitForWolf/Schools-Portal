@@ -16,9 +16,6 @@ Register Children
 	</div>
 </div>
 <br>
-@endsection
-
-@section('Form')
 
 @foreach ($children as $child)
   <div class="col-lg-3">
@@ -51,6 +48,9 @@ Register Children
  </div>
  @endforeach 
 
+@endsection
+
+@section('Form')
 <div class="row">
   <div class="col-lg-2">
   </div>
@@ -94,7 +94,7 @@ Register Children
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-save">Submit</button>
       </div>
     </div>
   </fieldset>
@@ -114,7 +114,7 @@ Register Children
                             <h4 class="modal-title" id="myModalLabel">Amend Details</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="frmchilds" action="{{ route('put.services.updateRegistrationPage') }}" method="post" name="frmchilds" class="form-horizontal" novalidate="">
+                            <form id="frmchilds" action="{{ url('/registration/') }}" method="post" name="frmchilds" class="form-horizontal" novalidate="">
                                 <div class="form-group error">
                                     <label for="f_name" class="col-sm-3 control-label">First Name</label>
                                     <div class="col-sm-9">

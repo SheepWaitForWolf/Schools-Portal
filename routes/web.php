@@ -46,7 +46,7 @@ Route::get('/home', function () {
 	return view('home');
 });
 
-Route::get('/registration/{child_id?}', ['uses'=>'ServicesController@getRegistrationPage','as'=>'get.services.getRegistrationPage']);
+Route::get('/registration/{child_id?}', ['uses'=>'ServicesController@getChildren','as'=>'get.services.getChildren']);
 
 Route::get('/absence/{absence_id?}', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
 
@@ -68,7 +68,7 @@ Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.s
 | Services POST Routes
 |--------------------------------------------------------------------------
 */
-Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@postRegistrationPage','as'=>'post.services.postRegistrationPage']);
+Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@postChildren','as'=>'post.services.postChildren']);
 
 Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
 
@@ -83,7 +83,7 @@ Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackP
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
-Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateRegistrationPage','as'=>'put.services.updateRegistrationPage']);
+Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'put.services.updateChildren']);
 Auth::routes();
 
 
@@ -94,7 +94,7 @@ Auth::routes();
 |--------------------------------------------------------------------------
 */
 
-Route::delete('registration/{child_id?}', ['uses'=>'ServicesController@deleteRegistrationPage','as'=>'delete.services.deleteRegistrationPage']);
+Route::delete('registration/{child_id?}', ['uses'=>'ServicesController@deleteChild','as'=>'delete.services.deleteChild']);
 
 Route::delete('feedback/{feedback_id?}', ['uses'=>'ServicesController@deleteFeedbackPage','as'=>'delete.services.deleteFeedbackPage']);
 

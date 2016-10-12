@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-=======
 @extends('layouts.master')
->>>>>>> refs/remotes/origin/master
 
 @section('content')
 <div class="container">

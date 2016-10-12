@@ -13,19 +13,19 @@ use App\Models\Child;
 use App\Models\Feedback;
 use App\Models\LocalAuthority;
 use App\Models\Absence;
-use App\Models\Enrolment;
 use App\Models\School;
 use App\Http\Requests;
 use Response;
 use DB;
+use Log;
 
 class ServicesController extends Controller
 {
     
 
-	public function getRegistrationPage() {
+	public function getChildren() {
         $children = Child::all();
-        
+        Log::info("Inside the getCHildren");
         return view('registration')->with('children', $children);
     }
 
@@ -115,7 +115,7 @@ class ServicesController extends Controller
         return redirect()->route('post.services.postAbsencePage');
     }
 
-     public function postRegistrationPage(Request $request)
+     public function postChildren(Request $request)
     {
         $childrecord = new Child;
         $childrecord->f_name = $request->f_name;
@@ -125,9 +125,9 @@ class ServicesController extends Controller
 
         $childrecord->save();
 
-        return $this->getRegistrationPage();
+        // return $this->getChildren();
 
-        // return view('registration');
+        return redirect()->route('get.services.getChildren');
 
 
         
@@ -150,7 +150,7 @@ class ServicesController extends Controller
         return redirect()->route('get.services.enrolment');
     }
 
-     public function updateRegistrationPage(Request $request)
+     public function updateChildren(Request $request)
     {
         $childrecord = Child::find($request->id);
         $childrecord->f_name = $request->f_name;
@@ -159,21 +159,20 @@ class ServicesController extends Controller
         $childrecord->dob = $request->dob;
         $childrecord->save();
 
-        return $this->getRegistrationPage();
+        return $this->getChildren();
 
-        return redirect()->route('get.services.getRegistrationPage');
+        return redirect()->route('get.services.getChildren');
 
         
     }
 
-    public function deleteRegistrationPage($id){
+    public function deleteChild($id){
 
        $childrecord = Child::find($id);
        $childrecord->delete();
-
-        return $this->getRegistrationPage();
-
-        return redirect()->route('get.services.getRegistrationPage');
+       return $this->getChildren();
+       return redirect()->route('get.services.getChildren');
+       // return redirect()->route('get.services.geredirect()->route('get.services.getChildren')tChildren');
     }
 
     public function deleteAbsencePage($id){
