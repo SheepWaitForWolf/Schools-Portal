@@ -147,14 +147,14 @@ class ServicesController extends Controller
 
      public function updateChildren(Request $request)
     {
-        $childrecord = Child::find($request->id);
+        $childrecord = Child::find($request->child_id);
         $childrecord->f_name = $request->f_name;
         $childrecord->l_name = $request->l_name;
         $childrecord->gender = $request->gender;
         $childrecord->dob = $request->dob;
         $childrecord->save();
 
-        return $this->getChildren();
+        return;
         
     }
 
