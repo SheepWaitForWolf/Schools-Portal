@@ -89,20 +89,23 @@ $(document).ready(function(){
                 // child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
                 // child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
 
-                // if (state == "add"){ //if user added a new record
-                //     $('#child-list').append(child);
-                // }else{ //if user updated an existing record
+              
+                var child = '<div class="col-lg-3"> <div class="box box-solid box-success"> <div class="box-header with-border"> <h3 class="box-title">{{ ' + data.f_name + '}}  {{ ' + data.l_name + '}}</h3>';
+    child += '<div class="box-tools pull-right"> <span class="label label-primary">#{{' + data.child_id + '}}</span> </div><!-- /.box-tools -->  </div><!-- /.box-header --><div class="box-body"><ul class="list-unstyled">';
+    child += '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender + ' }}</li> <li>School : {{ ' + data.school + ' }} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">';
+    child += '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
 
-                //     $("#child" + child_id).replaceWith( child );
-                // 
-                var child = '<div class="col-lg-3"> <div class="box box-solid box-success"> <div class="box-header with-border"> <h3 class="box-title">{{ ' + data.f_name + '}}  {{ ' + data.l_name + '}}</h3>'
-    + '<div class="box-tools pull-right"> <span class="label label-primary">#{{' + data.child_id + '}}</span> </div><!-- /.box-tools -->  </div><!-- /.box-header --><div class="box-body"><ul class="list-unstyled">'
-    +  '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender +' }}</li> <li>School : {{ ' + data.school +'}} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">'
-    +    '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
+                                console.log(child);
+                                
+          if (state == "add"){ //if user added a new record
+                    $('#child-list').append(child);
+                }else{ //if user updated an existing record
 
+                    $("#child" + child_id).replaceWith( child );
+                    }
                 $('#frmchilds').trigger("reset");
 
-                $('#myModal').modal('hide')
+                $('#myModal').modal('hide');
             },
             error: function (data) {
                 console.log('Error:', data);

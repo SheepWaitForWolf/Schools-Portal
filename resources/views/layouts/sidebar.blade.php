@@ -98,15 +98,6 @@
           </a>
         </li>
         <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        <li>
           <a href="pages/mailbox/mailbox.html">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
@@ -168,7 +159,6 @@
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
         </li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
