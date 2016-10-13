@@ -50,16 +50,16 @@ $(document).ready(function(){
     //create new child / update existing child
     $("#btn-save").click(function (e) {
         // console.log($(this));
-                e.preventDefault(); 
+
         var child_id = $(this).val();
-        console.log("Hello" + child_id);
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         })
 
-
+        e.preventDefault(); 
 
         var formData = {
             child_id: $('#child_id').val(),
@@ -75,9 +75,6 @@ $(document).ready(function(){
    
         var my_url = url + '/' + child_id;
 
-        
-        console.log(child_id);
-        console.log(my_url);
 
         $.ajax({
 
@@ -86,18 +83,22 @@ $(document).ready(function(){
             data: formData,
             dataType: 'json',
             success: function (data) {
-                // console.log(data);
+                console.log(data);
 
                 // var child = '<tr id="child' + data.id + '"><td>' + data.id + '</td><td>' + data.child + '</td><td>' + data.l_name + '</td><td>' + data.created_at + '</td>';
                 // child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
                 // child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
 
-                if (state == "add"){ //if user added a new record
-                    $('#child-list').append(child);
-                }else{ //if user updated an existing record
+                // if (state == "add"){ //if user added a new record
+                //     $('#child-list').append(child);
+                // }else{ //if user updated an existing record
 
-                    $("#child" + child_id).replaceWith( child );
-                }
+                //     $("#child" + child_id).replaceWith( child );
+                // 
+                var child = '<div class="col-lg-3"> <div class="box box-solid box-success"> <div class="box-header with-border"> <h3 class="box-title">{{ ' + data.f_name + '}}  {{ ' + data.l_name + '}}</h3>'
+    + '<div class="box-tools pull-right"> <span class="label label-primary">#{{' + data.child_id + '}}</span> </div><!-- /.box-tools -->  </div><!-- /.box-header --><div class="box-body"><ul class="list-unstyled">'
+    +  '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender +' }}</li> <li>School : {{ ' + data.school +'}} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">'
+    +    '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
 
                 $('#frmchilds').trigger("reset");
 

@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
+  <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
@@ -35,6 +37,22 @@
 <script type="text/javascript" src="./js/ajax-crud.js"></script>
 <script type="text/javascript" src="./js/absence-crud.js"></script>
 <script type="text/javascript" src="./js/feedback-crud.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
+<script type="text/javascript" src="./js/calendar.js"></script>
+
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Slimscroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- fullCalendar 2.2.5 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
 <!-- <script type="text/javascript" src="/js/app.js"></script> -->
