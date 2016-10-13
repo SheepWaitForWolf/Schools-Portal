@@ -18,25 +18,25 @@ Register Children
 <br>
 
 @foreach ($children as $child)
-  <div class="col-lg-3">
-<div class="box box-solid box-success">
-  <div class="box-header with-border">
-    <h3 class="box-title">{{ $child->f_name }}  {{$child->l_name}}</h3>
-    <div class="box-tools pull-right">
-      <!-- Buttons, labels, and many other things can be placed here! -->
-      <!-- Here is a label for example -->
-      <span class="label label-primary">#{{$child->child_id}}</span>
-    </div><!-- /.box-tools -->
-  </div><!-- /.box-header -->
-  <div class="box-body">
-    <ul class="list-unstyled">
-      <li>Date of Birth : {{ $child->dob}} </li>
-      <li>Gender : {{ $child->gender}}</li>
-      <li>School : {{ $child->school_id}} </li>
-      <li>Class : {{ $child->class_level}}</li>
-      <li>Attendance : </li>
-    </ul>
-  </div><!-- /.box-body -->
+  <div class="col-lg-3" id="child{{$child->child_id}}">
+    <div class="box box-solid box-success">
+      <div class="box-header with-border">
+       <h3 class="box-title">{{ $child->f_name }}  {{$child->l_name}}</h3>
+         <div class="box-tools pull-right">
+           <!-- Buttons, labels, and many other things can be placed here! -->
+          <!-- Here is a label for example -->
+          <span class="label label-primary">#{{$child->child_id}}</span>
+        </div><!-- /.box-tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body">
+        <ul class="list-unstyled">
+          <li>Date of Birth : {{ $child->dob}} </li>
+          <li>Gender : {{ $child->gender}}</li>
+          <li>School : {{ $child->school_id}} </li>
+          <li>Class : {{ $child->class_level}}</li>
+          <li>Attendance : </li>
+        </ul>
+      </div><!-- /.box-body -->
 
   <div class="box-footer">
 
@@ -44,7 +44,7 @@ Register Children
     <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{$child->child_id}}>Delete</button>
   </div><!-- box-footer -->
 
-</div><!-- /.box -->
+    </div><!-- /.box -->
  </div>
  @endforeach 
 

@@ -62,7 +62,7 @@ $(document).ready(function(){
         e.preventDefault(); 
 
         var formData = {
-            child_id: $('#child_id').val(),
+            child_id: child_id,
             f_name: $('#f_name').val(),
             l_name: $('#l_name').val(),
             gender: $('#gender').val(),
@@ -72,7 +72,6 @@ $(document).ready(function(){
         //used to determine the http verb to use [add=POST], [update=PUT]
         var state = $('#btn-save').val();
         var type = "POST"; //for creating new resource
-   
         var my_url = url + '/' + child_id;
 
 
@@ -83,20 +82,18 @@ $(document).ready(function(){
             data: formData,
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+
 
                 // var child = '<tr id="child' + data.id + '"><td>' + data.id + '</td><td>' + data.child + '</td><td>' + data.l_name + '</td><td>' + data.created_at + '</td>';
                 // child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
                 // child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
 
               
-                var child = '<div class="col-lg-3"> <div class="box box-solid box-success"> <div class="box-header with-border"> <h3 class="box-title">{{ ' + data.f_name + '}}  {{ ' + data.l_name + '}}</h3>';
-    child += '<div class="box-tools pull-right"> <span class="label label-primary">#{{' + data.child_id + '}}</span> </div><!-- /.box-tools -->  </div><!-- /.box-header --><div class="box-body"><ul class="list-unstyled">';
-    child += '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender + ' }}</li> <li>School : {{ ' + data.school + ' }} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">';
-    child += '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
+                var child = '<div class="col-lg-3" id="child{{$child->child_id}}"> <div class="box box-solid box-success"> <div class="box-header with-border"> <h3 class="box-title">{{ ' + data.f_name + '}}  {{' + data.l_name + '}}</h3>';
+                    child += '<div class="box-tools pull-right"> <span class="label label-primary">#{{' + data.child_id + '}}</span> </div><!-- /.box-tools -->  </div><!-- /.box-header --><div class="box-body"><ul class="list-unstyled">';
+                    child += '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender + ' }}</li> <li>School : {{ ' + data.school + ' }} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">';
+                    child += '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
 
-                                console.log(child);
-                                
           if (state == "add"){ //if user added a new record
                     $('#child-list').append(child);
                 }else{ //if user updated an existing record
@@ -106,6 +103,8 @@ $(document).ready(function(){
                 $('#frmchilds').trigger("reset");
 
                 $('#myModal').modal('hide');
+
+                                document.write(data);
             },
             error: function (data) {
                 console.log('Error:', data);

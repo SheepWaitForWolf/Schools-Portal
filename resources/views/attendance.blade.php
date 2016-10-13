@@ -8,6 +8,7 @@
     <section class="content-header">
       <h1> Attendance Calendar </h1>
         <h4>Control panel</h4>
+
     </section>
 
     <!-- Main content -->
