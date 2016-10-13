@@ -6,14 +6,8 @@
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Calendar
-        <small>Control panel</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Calendar</li>
-      </ol>
+      <h1> Attendance Calendar </h1>
+        <h4>Control panel</h4>
     </section>
 
     <!-- Main content -->
@@ -27,11 +21,12 @@
             <div class="box-body">
               <!-- the events -->
               <div id="external-events">
-                <div class="external-event bg-green">Lunch</div>
-                <div class="external-event bg-yellow">Go home</div>
-                <div class="external-event bg-aqua">Do homework</div>
-                <div class="external-event bg-light-blue">Work on UI design</div>
-                <div class="external-event bg-red">Sleep tight</div>
+                <div class="external-event bg-green">Attended</div>
+                <div class="external-event bg-red">Absent</div>
+                <div class="external-event bg-yellow">Lunch</div>
+                <div class="external-event bg-aqua">Homework</div>
+                <div class="external-event bg-light-blue">Private Appointment</div>
+
                 <div class="checkbox">
                   <label for="drop-remove">
                     <input type="checkbox" id="drop-remove">
