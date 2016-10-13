@@ -12,6 +12,13 @@ use App\Mail\AccountCreated;
 |
 */
 
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/hello', function ()    {
+//     return view('welcome');    
+//     });
+
+//   });
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -47,6 +54,10 @@ Route::get('/home', function () {
 	return view('home');
 });
 
+Route::get('/attendance', function () {
+	return view('attendance');
+});
+
 Route::get('/registration/{child_id?}', ['uses'=>'ServicesController@getChildren','as'=>'get.services.getChildren']);
 
 Route::get('/absence/{absence_id?}', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
@@ -54,6 +65,8 @@ Route::get('/absence/{absence_id?}', ['uses'=>'ServicesController@getAbsencePage
 Route::get('/enrol/{enrol_id?}', ['uses'=>'ServicesController@getEnrolmentPage','as'=>'get.services.getEnrolmentPage']);
 
 Route::get('/absence', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
+
+
 
 Route::get('/annualupdate', ['uses'=>'ServicesController@getAnnualUpdatePage','as'=>'get.services.showAnnualUpdatePage']);
 

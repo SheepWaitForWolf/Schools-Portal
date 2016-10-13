@@ -32,6 +32,7 @@ var request = $.ajax({
     });
   }
   </script>
+
 <div class="row">
 	<div class="col-lg-2">
 	</div>
