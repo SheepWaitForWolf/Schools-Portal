@@ -20,16 +20,3 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'password' => $password ?: $password = bcrypt('secret'),
     ];
 });
-
-$factory->define(App\Models\Enrolment::class, function (Faker\Generator $faker) {
-    
-    return [
-        'f_name' => $faker->firstName,
-        'l_name' => $faker->lastName,
-        'la' => $faker->company,
-        'school' => $faker->company,
-        'year_of_study' => $faker->numberBetween($min = 1, $max = 13),
-        'academic_year' => $faker->year($max = 'now')
-    ];
-});
-
