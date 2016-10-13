@@ -25,7 +25,7 @@ class ServicesController extends Controller
 
 	public function getChildren() {
         $children = Child::all();
-        Log::info("Inside the getCHildren");
+
         return view('registration')->with('children', $children);
     }
 
@@ -133,22 +133,17 @@ class ServicesController extends Controller
         
     }
 
-    public function postEnrolmentPage(Request $request)
+    public function postMapping(Request $request, $id)
     {
-        $enrolment = new Enrolment;
-        $enrolment->f_name = $request->f_name;
-        $enrolment->l_name = $request->l_name;
-        $enrolment->la = $request->la;
-        $enrolment->school = $request->school;
-        $enrolment->year_of_study = $request->year_of_study;
-        $enrolment->academic_year = $request->academic_year;
+        $mappingrecord = new UserChildMap;
+        $mappingrecord->user_id = $id;
+        $mappingrecord->child_id = $request->child_id;
+        $mappingrecord->relationship_type = $request->relationship_type;
 
-        $enrolment->save();
-
-        return $this->getEnrolmentPage();
-
-        return redirect()->route('get.services.enrolment');
+        $mappingrecord->save();
+        return;
     }
+
 
      public function updateChildren(Request $request)
     {
@@ -160,9 +155,6 @@ class ServicesController extends Controller
         $childrecord->save();
 
         return $this->getChildren();
-
-        return redirect()->route('get.services.getChildren');
-
         
     }
 
@@ -171,7 +163,6 @@ class ServicesController extends Controller
        $childrecord = Child::find($id);
        $childrecord->delete();
        return $this->getChildren();
-       return redirect()->route('get.services.getChildren');
        // return redirect()->route('get.services.geredirect()->route('get.services.getChildren')tChildren');
     }
 
