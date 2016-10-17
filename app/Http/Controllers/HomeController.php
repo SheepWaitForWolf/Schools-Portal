@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    public function showLogin()
+    {
+        return view('login');
+    }
+
+    public function doLogin()
+    {
+
+    }
 }
