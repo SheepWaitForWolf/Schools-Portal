@@ -77,13 +77,15 @@ $(document).ready(function(){
 
         $.ajax({
 
-            type: "PUT",
+            type: "POST",
             url: my_url,
             data: formData,
-            dataType: 'json',
+            // dataType: "json",
             success: function (data) {
+               
+                $('#frmchilds').trigger('reset');
 
-
+                $('#myModal').modal('hide');
                 // var child = '<tr id="child' + data.id + '"><td>' + data.id + '</td><td>' + data.child + '</td><td>' + data.l_name + '</td><td>' + data.created_at + '</td>';
                 // child += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.child_id + '">Edit</button>';
                 // child += '<button class="btn btn-danger btn-xs btn-delete delete-child" value="' + data.child_id + '">Delete</button></td></tr>';
@@ -94,16 +96,8 @@ $(document).ready(function(){
                     child += '<li>Date of Birth : {{ ' + data.dob + '}} </li>  <li>Gender : {{ ' + data.gender + ' }}</li> <li>School : {{ ' + data.school + ' }} </li> <li>Class : {{ ' + data.class_level + '}}</li>  <li>Attendance : </li></ul></div><!-- /.box-body --><div class="box-footer">';
                     child += '<button class="btn btn-warning btn-xs btn-detail open-modal pull-center" value={{ ' + data.child_id + '}}>Edit</button>   <button class="btn btn-danger btn-xs btn-delete delete-child pull-right" value={{ ' + data.child_id + '}}>Delete</button> </div><!-- box-footer --></div><!-- /.box --> </div>';
 
-          if (state == "add"){ //if user added a new record
-                    $('#child-list').append(child);
-                }else{ //if user updated an existing record
-
-                    $("#child" + child_id).replaceWith( child );
-                    }
-                $('#frmchilds').trigger("reset");
-
-                $('#myModal').modal('hide');
-
+                $('#child' + child_id).replaceWith( child );
+              
                                 document.write(data);
             },
             error: function (data) {
