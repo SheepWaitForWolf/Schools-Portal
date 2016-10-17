@@ -12,18 +12,11 @@ use App\Mail\AccountCreated;
 |
 */
 
-// Route::group(['middleware' => 'auth'], function () {
-//     Route::get('/hello', function ()    {
-//     return view('welcome');    
-//     });
-
-//   });
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/search', [
+Route::get('/search', [ 
     'as' => 'api.search',
     'uses' => 'Api\SearchController@search'
 ]);
@@ -37,8 +30,6 @@ Route::get('/help', function () {
 });
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
-
-// route to process the form
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 Route::get('logout', array('uses' => 'HomeController@doLogout'));

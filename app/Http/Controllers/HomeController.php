@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    
+
     public function showLogin()
     {
         return view('login');
@@ -33,6 +33,8 @@ class HomeController extends Controller
 
     public function doLogin()
     {
-
+         if (\Auth::attempt($this->credentials, $this->remember)) {
+         return \Redirect::route("/");
+    }
     }
 }

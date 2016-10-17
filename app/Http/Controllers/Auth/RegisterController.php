@@ -45,6 +45,12 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+        protected function guard()
+    {
+        return Auth::guard('web');
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
