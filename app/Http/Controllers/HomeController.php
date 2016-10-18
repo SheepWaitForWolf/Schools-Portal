@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,7 @@ class HomeController extends Controller
 
     public function showLogin()
     {
-        return view('auth.login');
+        return view('login');
     }
 
     public function doLogin(Request $request)
@@ -41,6 +42,12 @@ class HomeController extends Controller
         return redirect('/login')->withErrors([
             'email' => 'The credentials you entered did not match our records. Try again?',
             ]);
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return view('auth.login');
     }
 
 }

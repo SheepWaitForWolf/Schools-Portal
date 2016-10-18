@@ -1,6 +1,7 @@
 <?php
 
 use App\Mail\AccountCreated;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/search', [ 
-    'as' => 'api.search',
-    'uses' => 'Api\SearchController@search'
-]);
+// Route::get('/search', [ 
+//     'as' => 'api.search',
+//     'uses' => 'Api\SearchController@search'
+// ]);
 
 Route::get('/about', function () {
 	return view('about');
@@ -31,9 +32,8 @@ Route::get('/help', function () {
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
-
-Route::get('logout', array('uses' => 'HomeController@doLogout'));
-
+Route::get('logout', array('uses' => 'HomeController@logout'));
+Auth::routes();
 
 /*
 |--------------------------------------------------------------------------
@@ -88,8 +88,8 @@ Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackP
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
-Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'put.services.updateChildren']);
-Auth::routes();
+Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
+
 
 
 
@@ -113,7 +113,7 @@ Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentP
 |--------------------------------------------------------------------------
 */
 
-Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
+// Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
 
 
 
@@ -125,6 +125,6 @@ Route::get('/mail', function () {
 
     return view('welcome');
 });
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
