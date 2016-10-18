@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class LocalAuthority extends Model
 {
+    use Searchable;    
+
     protected $table = 'portal_local_authorities_mst';
 
     protected $primaryKey = 'la_id';

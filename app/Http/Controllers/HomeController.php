@@ -28,13 +28,19 @@ class HomeController extends Controller
 
     public function showLogin()
     {
-        return view('login');
+        return view('auth.login');
     }
 
-    public function doLogin()
+    public function doLogin(Request $request)
     {
-         if (\Auth::attempt($this->credentials, $this->remember)) {
-         return \Redirect::route("/");
+         if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) 
+        {
+        return redirect('/home');
+        }
+
+        return redirect('/login')->withErrors([
+            'email' => 'The credentials you entered did not match our records. Try again?',
+            ]);
     }
-    }
+
 }

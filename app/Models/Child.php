@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Child extends Model
 {
-   	protected $table = 'portal_child_mst';
+   	use Searchable;
+    
+    protected $table = 'portal_child_mst';
 
     protected $primaryKey = 'child_id';
 

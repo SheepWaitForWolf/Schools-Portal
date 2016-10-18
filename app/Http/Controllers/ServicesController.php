@@ -154,7 +154,7 @@ class ServicesController extends Controller
         $childrecord->dob = $request->dob;
         $childrecord->save();
 
-        return;
+        return $this->getChildren();
         
     }
 

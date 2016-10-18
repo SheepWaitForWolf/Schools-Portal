@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class School extends Model
 {
+    use Searchable;
+
     protected $table = 'portal_schools_mst';
 
     protected $primaryKey = 'school_id';
