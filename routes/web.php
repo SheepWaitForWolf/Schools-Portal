@@ -26,8 +26,8 @@ Route::get('/about', function () {
 	return view('about');
 });
 
-Route::get('/help', function () {
-	return view('help');
+Route::get('/accessibility', function () {
+	return view('accessibility');
 });
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
