@@ -36,7 +36,7 @@
         </li>
         <li class="treeview-menu">
           <a href="/registration">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-odnoklassniki"></i>
             <span>Registration</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
@@ -45,7 +45,7 @@
         </li>
         <li>
           <a href="/registration">
-            <i class="fa fa-th"></i> <span>Registration</span>
+            <i class="fa fa-odnoklassniki"></i> <span>Registration</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
@@ -53,7 +53,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-pie-chart"></i>
+            <i class="fa fa-calendar-check-o"></i>
             <span>Attendance</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -66,7 +66,7 @@
         </li>
         <li class="treeview">
           <a href="/schoolmeals">
-            <i class="fa fa-laptop"></i>
+            <i class="fa fa-cutlery"></i>
             <span>School Meals</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -83,7 +83,7 @@
         </li>
         <li class="treeview">
           <a href="/results">
-            <i class="fa fa-edit"></i> <span>View Exam Results</span>
+            <i class="fa fa-graduation-cap"></i> <span>View Exam Results</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -91,7 +91,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>Annual Detail Checker</span>
+            <i class="fa fa-calendar-check-o"></i> <span>Annual Detail Checker</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -109,7 +109,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Examples</span>
+            <i class="fa fa-question-circle"></i> <span>User Guide</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -126,7 +126,7 @@
             <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-share"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -158,7 +158,7 @@
             </li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </section>
     <!-- /.sidebar -->
