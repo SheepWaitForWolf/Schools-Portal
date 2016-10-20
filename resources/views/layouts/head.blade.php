@@ -34,12 +34,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./js/ajax-crud.js"></script>
-<script type="text/javascript" src="./js/absence-crud.js"></script>
-<script type="text/javascript" src="./js/feedback-crud.js"></script>
-<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
-<script type="text/javascript" src="./js/calendar.js"></script>
-<script type="text/javascript" src="./dist/js/app.js"></script>
+
 
 
 <!-- jQuery UI 1.11.4 -->
