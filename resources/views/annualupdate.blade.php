@@ -11,15 +11,9 @@ Annual Detail Check
 	<div class="col-md-8">
 		<p> <strong>Annual Detail Checker </strong><br>
 			<br>
-		Use this guide to get the most out of your myaccount services. If you are a new user, make sure your details are
-		up to date on myaccount and sign in with your login credentials. 
-		<br>
-		<h3>Register Children</h3>
-
-		<p> We are committed to ensure our website works with preferred technologies, including making our site 
-		accessible if you are visually impaired. By anonymously monitoring browsers, operating systems and screen
-	 	solutions we see how they change over time allowing us to adapt and adjust schoolportal.com to ensure it’s simple and
-	 	 easy to use. </p> 
+		
+		This is the place where you can check that the records we keep are up to date and accurate. This is planned to replace
+		the paper form that is normally sent home with children each year. Please ensure that the details we have are correct for you.
 
 	</div>
 </div>
