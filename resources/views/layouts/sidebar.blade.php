@@ -64,18 +64,13 @@
             <li><a href="/attendance"><i class="fa fa-calendar"></i>View Attendance Record</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <li>
           <a href="/schoolmeals">
-            <i class="fa fa-cutlery"></i>
-            <span>School Meals</span>
+            <i class="fa fa-cutlery"></i> <span>School Meals</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              <small class="label pull-right bg-green">new</small>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="/payment"> Make a payment</a></li>
-            <li><a href="/mealcalendar">View Attendance Record</a></li>
-          </ul>
         </li>
         <li class="treeview">
           <a href="#">
@@ -107,39 +102,6 @@
             <li><a href="/accessibility"><i class="fa fa-wheelchair"></i> Accessibility</a></li>
           </ul>
         </li>
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            <li>
-              <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-          </ul>
-        </li> -->
       </ul>
     </section>
     <!-- /.sidebar -->
