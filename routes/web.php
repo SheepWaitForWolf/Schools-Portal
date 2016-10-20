@@ -30,6 +30,10 @@ Route::get('/accessibility', function () {
 	return view('accessibility');
 });
 
+Route::get('/help', function () {
+	return view('help');
+});
+
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 Route::get('logout', array('uses' => 'HomeController@logout'));
