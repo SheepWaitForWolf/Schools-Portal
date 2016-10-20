@@ -60,8 +60,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/absence">Report an Absence</a></li>
-            <li><a href="/attendance">View Attendance Record</a></li>
+            <li><a href="/absence"><i class="fa fa-edit"></i>Report an Absence</a></li>
+            <li><a href="/attendance"><i class="fa fa-calendar"></i>View Attendance Record</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -73,17 +73,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/payment">Make a payment</a></li>
+            <li><a href="/payment"> Make a payment</a></li>
             <li><a href="/mealcalendar">View Attendance Record</a></li>
           </ul>
-        </li>
-        <li class="treeview">
-          <a href="/results">
-            <i class="fa fa-graduation-cap"></i> <span>View Exam Results</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
         </li>
         <li class="treeview">
           <a href="#">

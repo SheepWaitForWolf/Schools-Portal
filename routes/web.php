@@ -61,7 +61,6 @@ Route::get('/absence', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.s
 
 Route::get('/annualupdate', ['uses'=>'ServicesController@getAnnualUpdatePage','as'=>'get.services.showAnnualUpdatePage']);
 
-Route::get('/results', ['uses'=>'ServicesController@getResultsPage','as'=>'get.services.showResultsPage']);
 
 Route::get('/schoolmeals', ['uses'=>'ServicesController@getSchoolMealsPage','as'=>'get.services.showSchoolMealsPage']);
 

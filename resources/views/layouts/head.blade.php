@@ -31,24 +31,24 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="./dist/js/app.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/ajax-crud.js"></script>
 <script type="text/javascript" src="./js/absence-crud.js"></script>
 <script type="text/javascript" src="./js/feedback-crud.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
 <script type="text/javascript" src="./js/calendar.js"></script>
+<script type="text/javascript" src="./dist/js/app.js"></script>
 
 
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Slimscroll -->
-<!-- <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script> -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<!-- <script src="../plugins/fastclick/fastclick.js"></script>
- --><!-- AdminLTE App -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
 <script src="../dist/js/app.js"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="../dist/js/demo.js"></script> -->
