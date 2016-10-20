@@ -34,6 +34,10 @@ Route::get('/help', function () {
 	return view('help');
 });
 
+Route::get('/schoolmeals', function () {
+	return view('schoolmeals');
+});
+
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 Route::get('logout', array('uses' => 'HomeController@logout'));
