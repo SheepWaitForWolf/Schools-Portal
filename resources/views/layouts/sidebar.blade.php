@@ -73,7 +73,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="/annualupdate">
             <i class="fa fa-calendar-check-o"></i> <span>Annual Detail Checker</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
