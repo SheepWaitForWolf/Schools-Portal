@@ -88,14 +88,11 @@ Route::post('/registration/addchild/{child_id?}', ['uses'=>'ServicesController@p
 
 Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
 
-
 Route::post('/absence/{absence_id?}', ['uses'=>'ServicesController@postAbsencePage','as'=>'post.services.postAbsencePage']);
 
 Route::post('/feedback', ['uses'=>'ServicesController@postFeedbackPage','as'=>'post.services.postFeedbackPage']);
 
-
 Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackPage','as'=>'get.services.getFeedbackPage']);
-
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
@@ -136,6 +133,10 @@ Route::get('/compose', function () {
 
 Route::get('/readmail', function () {
 	return view('mailbox.readmail');
+});
+
+Route::get('/outbox', function () {
+	return view('mailbox.outbox');
 });
 Route::get('/newaccount', function () {
     // send an email to myself
