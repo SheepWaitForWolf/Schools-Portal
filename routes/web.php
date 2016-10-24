@@ -127,10 +127,12 @@ Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentP
 // Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
 
 
+Route::get('/mailbox', function () {
+	return view('mailbox');
+});
 
 
-
-Route::get('/mail', function () {
+Route::get('/newaccount', function () {
     // send an email to myself
     Mail::to('dglennie89@gmail.com')->send(new AccountCreated);
 

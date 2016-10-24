@@ -3,9 +3,9 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <div class="col-md-2">
+      <div class="col-md-3">
       </div>
-      <div class="col-md-8">      
+      <div class="col-md-9">      
       <h2>
         @yield('Title')        
       </h2>

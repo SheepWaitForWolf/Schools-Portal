@@ -81,7 +81,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/mailbox/mailbox.html">
+          <a href="/mailbox">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
