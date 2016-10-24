@@ -131,6 +131,9 @@ Route::get('/mailbox', function () {
 	return view('mailbox');
 });
 
+Route::get('/compose', function () {
+	return view('compose');
+});
 
 Route::get('/newaccount', function () {
     // send an email to myself
