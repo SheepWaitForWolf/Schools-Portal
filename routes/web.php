@@ -99,7 +99,6 @@ Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackP
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
-Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
 
 
 
@@ -128,13 +127,16 @@ Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentP
 
 
 Route::get('/mailbox', function () {
-	return view('mailbox');
+	return view('mailbox.mailbox');
 });
 
 Route::get('/compose', function () {
-	return view('compose');
+	return view('mailbox.compose');
 });
 
+Route::get('/readmail', function () {
+	return view('mailbox.readmail');
+});
 Route::get('/newaccount', function () {
     // send an email to myself
     Mail::to('dglennie89@gmail.com')->send(new AccountCreated);
