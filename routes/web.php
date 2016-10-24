@@ -84,7 +84,7 @@ Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.s
 | Services POST Routes
 |--------------------------------------------------------------------------
 */
-Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@postChildren','as'=>'post.services.postChildren']);
+Route::post('/registration/addchild/{child_id?}', ['uses'=>'ServicesController@postChildren','as'=>'post.services.postChildren']);
 
 Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
 
@@ -99,7 +99,7 @@ Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackP
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
-
+Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
 
 
 
