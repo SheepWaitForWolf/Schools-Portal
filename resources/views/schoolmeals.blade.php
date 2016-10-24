@@ -27,8 +27,6 @@ benefits.</p>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1> School Calendar </h1>
-        <h4>Control panel</h4>
-
     </section>
 
     <!-- Main content -->
@@ -42,12 +40,9 @@ benefits.</p>
             <div class="box-body">
               <!-- the events -->
               <div id="external-events">
-                <div class="external-event bg-green">Attended</div>
+                <div class="external-event bg-green">Lunch Collected</div>
+                <div class="external-event bg-yellow">Lunch Not Collected</div>
                 <div class="external-event bg-red">Absent</div>
-                <div class="external-event bg-yellow">Lunch</div>
-                <div class="external-event bg-aqua">Homework</div>
-                <div class="external-event bg-light-blue">Private Appointment</div>
-
                 <div class="checkbox">
                   <label for="drop-remove">
                     <input type="checkbox" id="drop-remove">
