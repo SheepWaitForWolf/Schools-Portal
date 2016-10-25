@@ -37,7 +37,7 @@
                         Support Team
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>Welcome to myaccount School Portal!</p>
                     </a>
                   </li>
                   <!-- end message -->
@@ -101,7 +101,7 @@
               <span class="label label-warning">10</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li class="header">You have 3 notifications</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
