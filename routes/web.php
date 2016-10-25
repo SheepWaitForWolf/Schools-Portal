@@ -46,124 +46,115 @@ Route::group(['middleware' => ['web','auth']], function () {
 	Route::get('/annualupdate', function () {
 		return view('annualupdate');
 	});
+
+	Route::get('logout', array('uses' => 'HomeController@logout'));
+
+	Route::get('/home', function () {
+		return view('home');
+	});
+
+	/*
+	|--------------------------------------------------------------------------
+	| Services GET Routes
+	|--------------------------------------------------------------------------
+	*/
+
+	Route::get('/attendance', function () {
+		return view('attendance');
+	});
+
+	Route::get('/registration/{child_id?}', ['uses'=>'ServicesController@getChildren','as'=>'get.services.getChildren']);
+	Route::get('/absence/{absence_id?}', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
+	Route::get('/enrol/{enrol_id?}', ['uses'=>'ServicesController@getEnrolmentPage','as'=>'get.services.getEnrolmentPage']);
+	Route::get('/absence', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
+	Route::get('/annualupdate', ['uses'=>'ServicesController@getAnnualUpdatePage','as'=>'get.services.showAnnualUpdatePage']);
+	Route::get('/schoolmeals', ['uses'=>'ServicesController@getSchoolMealsPage','as'=>'get.services.showSchoolMealsPage']);
+	Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.services.getSchools']);
+
+
+	/*
+	|--------------------------------------------------------------------------
+	| Services POST Routes
+	|--------------------------------------------------------------------------
+	*/
+	Route::post('/registration/addchild/{child_id?}', ['uses'=>'ServicesController@postChildren','as'=>'post.services.postChildren']);
+	Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
+	Route::post('/absence/{absence_id?}', ['uses'=>'ServicesController@postAbsencePage','as'=>'post.services.postAbsencePage']);
+	Route::post('/feedback', ['uses'=>'ServicesController@postFeedbackPage','as'=>'post.services.postFeedbackPage']);
+	Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackPage','as'=>'get.services.getFeedbackPage']);
+	Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
+	Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
+
+
+	/*
+	|--------------------------------------------------------------------------
+	| Services DELETE Routes
+	|--------------------------------------------------------------------------
+	*/
+	Route::delete('registration/{child_id?}', ['uses'=>'ServicesController@deleteChild','as'=>'delete.services.deleteChild']);
+	Route::delete('feedback/{feedback_id?}', ['uses'=>'ServicesController@deleteFeedbackPage','as'=>'delete.services.deleteFeedbackPage']);
+	Route::delete('absence/{absence_id?}', ['uses'=>'ServicesController@deleteAbsencePage','as'=>'delete.services.deleteAbsencePage']);
+	Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentPage','as'=>'delete.services.deleteEnrolmentPage']);
+
+	/*
+	|--------------------------------------------------------------------------
+	| SimpleSAML based Routes
+	|--------------------------------------------------------------------------
+	*/
+
+	// Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
+
+	/*
+	|--------------------------------------------------------------------------
+	| Mail GET Routes
+	|--------------------------------------------------------------------------
+	*/
+	Route::get('/mailbox', function () {
+		return view('mailbox.mailbox');
+	});
+
+	Route::get('/compose', function () {
+		return view('mailbox.compose');
+	});
+
+	Route::get('/readmail', function () {
+		return view('mailbox.readmail');
+	});
+
+	Route::get('/outbox', function () {
+		return view('mailbox.outbox');
+	});
+
+	Route::get('/drafts', function () {
+		return view('mailbox.drafts');
+	});
+
+	Route::get('/junk', function () {
+		return view('mailbox.junk');
+	});
+
+	Route::get('/trash', function () {
+		return view('mailbox.trash');
+	});
+
+	Route::get('/newaccount', function () {
+	    // send an email to myself
+	    Mail::to('dglennie89@gmail.com')->send(new AccountCreated);
+
+	    return view('welcome');
+	});
+
+
+
+
+
+
+
 });
 
 Auth::routes();
 
-/*
-|--------------------------------------------------------------------------
-| Services GET Routes
-|--------------------------------------------------------------------------
-*/
 
-Route::get('/home', function () {
-	return view('home');
-});
-
-Route::get('/attendance', function () {
-	return view('attendance');
-});
-
-Route::get('/registration/{child_id?}', ['uses'=>'ServicesController@getChildren','as'=>'get.services.getChildren']);
-
-Route::get('/absence/{absence_id?}', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
-
-Route::get('/enrol/{enrol_id?}', ['uses'=>'ServicesController@getEnrolmentPage','as'=>'get.services.getEnrolmentPage']);
-
-Route::get('/absence', ['uses'=>'ServicesController@getAbsencePage','as'=>'get.services.getAbsencePage']);
-
-
-
-Route::get('/annualupdate', ['uses'=>'ServicesController@getAnnualUpdatePage','as'=>'get.services.showAnnualUpdatePage']);
-
-
-Route::get('/schoolmeals', ['uses'=>'ServicesController@getSchoolMealsPage','as'=>'get.services.showSchoolMealsPage']);
-
-Route::get('/getschools', ['uses'=>'ServicesController@getSchools', 'as'=>'get.services.getSchools']);
-
-
-/*
-|--------------------------------------------------------------------------
-| Services POST Routes
-|--------------------------------------------------------------------------
-*/
-Route::post('/registration/addchild/{child_id?}', ['uses'=>'ServicesController@postChildren','as'=>'post.services.postChildren']);
-
-Route::post('/enrol/{enrol_id?}', ['uses'=>'ServicesController@postEnrolmentPage','as'=>'post.services.postEnrolmentPage']);
-
-Route::post('/absence/{absence_id?}', ['uses'=>'ServicesController@postAbsencePage','as'=>'post.services.postAbsencePage']);
-
-Route::post('/feedback', ['uses'=>'ServicesController@postFeedbackPage','as'=>'post.services.postFeedbackPage']);
-
-Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackPage','as'=>'get.services.getFeedbackPage']);
-
-Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
-
-Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Services DELETE Routes
-|--------------------------------------------------------------------------
-*/
-
-Route::delete('registration/{child_id?}', ['uses'=>'ServicesController@deleteChild','as'=>'delete.services.deleteChild']);
-
-Route::delete('feedback/{feedback_id?}', ['uses'=>'ServicesController@deleteFeedbackPage','as'=>'delete.services.deleteFeedbackPage']);
-
-Route::delete('absence/{absence_id?}', ['uses'=>'ServicesController@deleteAbsencePage','as'=>'delete.services.deleteAbsencePage']);
-
-Route::delete('enrol/{enrol_id?}', ['uses'=>'ServicesController@deleteEnrolmentPage','as'=>'delete.services.deleteEnrolmentPage']);
-
-/*
-|--------------------------------------------------------------------------
-| SimpleSAML based Routes
-|--------------------------------------------------------------------------
-*/
-
-// Route::get('/userhome',['uses'=>'SimpleSAMLPHPController@getUserData','as'=>'get.simplesamlphp.userdata']);
-
-/*
-|--------------------------------------------------------------------------
-| Mail GET Routes
-|--------------------------------------------------------------------------
-*/
-Route::get('/mailbox', function () {
-	return view('mailbox.mailbox');
-});
-
-Route::get('/compose', function () {
-	return view('mailbox.compose');
-});
-
-Route::get('/readmail', function () {
-	return view('mailbox.readmail');
-});
-
-Route::get('/outbox', function () {
-	return view('mailbox.outbox');
-});
-
-Route::get('/drafts', function () {
-	return view('mailbox.drafts');
-});
-
-Route::get('/junk', function () {
-	return view('mailbox.junk');
-});
-
-Route::get('/trash', function () {
-	return view('mailbox.trash');
-});
-
-Route::get('/newaccount', function () {
-    // send an email to myself
-    Mail::to('dglennie89@gmail.com')->send(new AccountCreated);
-
-    return view('welcome');
-});
 
 
 Route::get('/home', 'HomeController@index');
