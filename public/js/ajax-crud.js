@@ -69,15 +69,15 @@ $(document).ready(function(){
             dob: $('#dob').val()
         }
 
-        //used to determine the http verb to use [add=POST], [update=PUT]
+        
         var state = $('#btn-save').val();
-        var type = "POST"; //for creating new resource
+        var type = "PUT"; //for creating new resource
         var my_url = url + '/' + child_id;
 
 
         $.ajax({
 
-            type: "POST",
+            type: "PUT",
             url: my_url,
             data: formData,
             // dataType: "json",
