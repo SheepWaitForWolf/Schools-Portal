@@ -17,34 +17,37 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+Route::post('login', array('uses' => 'HomeController@doLogin'));
+Route::get('logout', array('uses' => 'HomeController@logout'));
+
 Route::get('/search', [ 
     'as' => 'api.search',
     'uses' => 'Api\SearchController@search'
 ]);
 
-Route::get('/about', function () {
-	return view('about');
+Route::group(['middleware' => ['web','auth']], function () {
+	Route::get('/about', function () {
+		return view('about');
+	});
+
+	Route::get('/accessibility', function () {
+		return view('accessibility');
+	});
+
+	Route::get('/help', function () {
+		return view('help');
+	});
+
+	Route::get('/schoolmeals', function () {
+		return view('schoolmeals');
+	});
+
+	Route::get('/annualupdate', function () {
+		return view('annualupdate');
+	});
 });
 
-Route::get('/accessibility', function () {
-	return view('accessibility');
-});
-
-Route::get('/help', function () {
-	return view('help');
-});
-
-Route::get('/schoolmeals', function () {
-	return view('schoolmeals');
-});
-
-Route::get('/annualupdate', function () {
-	return view('annualupdate');
-});
-
-Route::get('login', array('uses' => 'HomeController@showLogin'));
-Route::post('login', array('uses' => 'HomeController@doLogin'));
-Route::get('logout', array('uses' => 'HomeController@logout'));
 Auth::routes();
 
 /*
