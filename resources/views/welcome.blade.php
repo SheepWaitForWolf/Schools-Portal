@@ -1,9 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.landing')
 
-@section('Title')
-Welcome
-@stop
+
 
 @section('Content')
-
+<img src="public/dist/img/school.jpg">
 @stop
