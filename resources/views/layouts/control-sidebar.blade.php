@@ -16,9 +16,9 @@
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Lou's Birthday</h4>
 
-                <p>Will be 23 on April 24th</p>
+                <p>Will be 21 on Jan 24th</p>
               </div>
             </a>
           </li>
