@@ -54,7 +54,7 @@ Register Children
   <div class="col-lg-10">
 
 
-<form class="form-horizontal" action="{{ url('/registration/') }}" method="post">
+<form class="form-horizontal" action="{{ url('/registration/addchild/') }}" method="post">
   <fieldset>
     <div class="form-group">
       <label for="inputFirstName" class="col-lg-2 control-label">First Name</label>
@@ -111,7 +111,7 @@ Register Children
                             <h4 class="modal-title" id="myModalLabel">Amend Details</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="frmchilds" action="{{ url('/registration/') }}" method="post" name="frmchilds" class="form-horizontal" novalidate="">
+                            <form id="frmchilds" action="{{ url('/registration/addchild') }}" method="post" name="frmchilds" class="form-horizontal" novalidate="">
                                 <div class="form-group error">
                                     <label for="f_name" class="col-sm-3 control-label">First Name</label>
                                     <div class="col-sm-9">

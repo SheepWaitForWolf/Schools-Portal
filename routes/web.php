@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/search', [ 
-//     'as' => 'api.search',
-//     'uses' => 'Api\SearchController@search'
-// ]);
+Route::get('/search', [ 
+    'as' => 'api.search',
+    'uses' => 'Api\SearchController@search'
+]);
 
 Route::get('/about', function () {
 	return view('about');
@@ -96,7 +96,7 @@ Route::get('/feedback/{feedback_id?}', ['uses'=>'ServicesController@getfeedbackP
 
 Route::put('/feedback/{feedback_id?}', ['uses'=>'ServicesController@updateFeedbackPage','as'=>'put.services.updateFeedbackPage']);
 
-Route::post('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
+Route::put('/registration/{child_id?}', ['uses'=>'ServicesController@updateChildren','as'=>'post.services.updateChildren']);
 
 
 
