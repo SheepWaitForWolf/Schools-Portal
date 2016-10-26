@@ -50,6 +50,39 @@
     </div><!-- /.info-box -->
     </div>
 
+    <div class="col-md-3">
+        <!-- Apply any bg-* class to to the info-box to color it -->
+    <div class="info-box bg-red">
+      <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Likes</span>
+        <span class="info-box-number">41,410</span>
+        <!-- The progress section is optional -->
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%"></div>
+        </div>
+        <span class="progress-description">
+          70% Increase in 30 Days
+        </span>
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+    </div>
+
 </div>
+
+<br>
+
+    <div>
+    <p>
+        Your user profile page displays your myaccount School Portal information. Please have a look around and be
+        sure to complete all the necessary steps for registration. If you would like some assistance setting up your 
+        try having a look at our <a href="/help">help</a> page.
+    </p>
+
+    <p>We hope you find the experience of registering with myaccount comfortable and an improvement on the paper approach, if you have any questions or issues don't hesitate to log some <a href="/feedback">feedback</a> and we will get back to you as soon as we can.</p>
+    </div>
+
 </div>
+
+
 @endsection
