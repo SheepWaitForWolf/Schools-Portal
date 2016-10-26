@@ -13,6 +13,21 @@
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
+              <i class="menu-icon fa fa-calendar bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Absence Reported</h4>
+
+                <p>10-10-2016</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <h3 class="control-sidebar-heading">Reminders</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
