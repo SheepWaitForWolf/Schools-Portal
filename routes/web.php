@@ -14,7 +14,7 @@ use App\Mail\AccountCreated;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
