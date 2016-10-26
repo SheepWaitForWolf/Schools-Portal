@@ -1,8 +1,7 @@
 .login {
 	background-image: url("../dist/img/schools.jpg") !important;
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> refs/remotes/origin/master
+.profile-bg {
+	background-image: url("../dist/img/boxed-bg.jpg") !important;
+}
