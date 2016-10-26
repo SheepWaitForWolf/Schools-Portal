@@ -2,7 +2,7 @@
 
 @section('Content')
 <div class="container">
-   <h2>Welcome, User!</h2>
+   <h2>Welcome, Tony!</h2>
 <br>
 <br>
        <div class="row">
@@ -31,7 +31,7 @@
          </a>
           <div class="info-box-content">
             <span class="info-box-text">Registered Children</span>
-            <span class="info-box-number">3</span>
+            <span class="info-box-number">{{$childcount}}</span>
           </div><!-- /.info-box-content -->
             </a>
         </div><!-- /.info-box -->
@@ -81,13 +81,18 @@
 <br>
 
     <div>
-    <p>
+    <p><strong>
         Your user profile page displays your myaccount School Portal information. Please have a look around and be
-        sure to complete all the necessary steps for registration. If you would like some assistance setting up your 
+        sure to complete all the necessary steps for registration. If you would like some assistance setting up your profile
         try having a look at our <a href="/help">help</a> page.
+    </strong>
     </p>
 
-    <p>We hope you find the experience of registering with myaccount comfortable and an improvement on the paper approach, if you have any questions or issues don't hesitate to log some <a href="/feedback">feedback</a> and we will get back to you as soon as we can.</p>
+    <p><strong>
+        We hope you find the experience of registering with myaccount comfortable and an improvement on the paper approach, if you have any questions or issues don't hesitate to log some <a href="/feedback">feedback</a> and we will get back to you as soon as we can.
+    </strong>
+    </p>
+    
     </div>
 
 </div>

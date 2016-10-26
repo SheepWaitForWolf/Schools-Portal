@@ -68,6 +68,7 @@ class HomeController extends Controller
         $childcount = count(DB::table('portal_child_mst')->select('*')->get());
          //DB::select('SELECT SUBSTRING_INDEX(name, " ", 1) FROM portal_users_mst WHERE email = "big_tony@gmail.com"');
         $username = DB::table('portal_users_mst')->select('name')->where('email', '=', 'big_tony@gmail.com')->get();
+
         return view('home')->with('childcount', $childcount)->with('username', $username);
     }
 
