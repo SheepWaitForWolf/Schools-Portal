@@ -28,7 +28,7 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="/home">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Profile</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
