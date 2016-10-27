@@ -29,7 +29,7 @@
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- start message -->
-                    <a href="#">
+                    <a href="/mailbox">
                       <div class="pull-left">
                         <img src="dist/img/defaultavatar.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -42,7 +42,7 @@
                   </li>
                   <!-- end message -->
                   <li>
-                    <a href="#">
+                    <a href="/mailbox">
                       <div class="pull-left">
                         <img src="dist/img/defaultavatar.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -54,7 +54,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/mailbox">
                       <div class="pull-left">
                         <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -66,7 +66,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/mailbox">
                       <div class="pull-left">
                         <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -78,7 +78,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/mailbox">
                       <div class="pull-left">
                         <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -91,7 +91,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
+              <li class="footer"><a href="/mailbox">See All Messages</a></li>
             </ul>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
