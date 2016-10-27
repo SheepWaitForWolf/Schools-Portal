@@ -2,9 +2,8 @@
 
 @section('Content')
 <div class="container">
-   <h2>Welcome, {{$fname}}!</h2>
-<br>
-<br>
+   <br>
+      <br>
        <div class="row">
         <div class="col-md-3">
            <div class="info-box">
@@ -61,10 +60,12 @@
     <div class="col-md-3">
         <!-- Apply any bg-* class to to the info-box to color it -->
     <div class="info-box bg-red">
+      <a href="/feedback">
       <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+      </a>
       <div class="info-box-content">
         <span class="info-box-text">Feedback</span>
-        <span class="info-box-number">41,410</span>
+        <span class="info-box-number">19,410</span>
         <!-- The progress section is optional -->
         <div class="progress">
           <div class="progress-bar" style="width: 70%"></div>
@@ -79,10 +80,12 @@
 </div>
 
 <br>
+<h3>Welcome, {{$fname}}!</h3>
+<br>
 
     <div>
     <p><strong>
-        Your user profile page displays your myaccount School Portal information. Please have a look around and be
+        Your user profile displays your myaccount School Portal information. Please have a look around and be
         sure to complete all the necessary steps for registration. If you would like some assistance setting up your profile
         try having a look at our <a href="/help">help</a> page.
     </strong>
