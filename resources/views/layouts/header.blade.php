@@ -222,7 +222,7 @@
                 <img src="dist/img/defaultavatar.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Daniel Glennie - Web Developer
+                  Tony Soprano
                   <small>Member since Sep. 2016</small>
                 </p>
               </li>
