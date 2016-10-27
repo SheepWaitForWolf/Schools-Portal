@@ -163,11 +163,13 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
          Collective\Html\HtmlServiceProvider::class,
          Laravel\Scout\ScoutServiceProvider::class,
+         Roumen\Sitemap\SitemapServiceProvider::class,
 
         /*
          * Application Service Providers...
