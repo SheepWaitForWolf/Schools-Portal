@@ -106,9 +106,7 @@ Route::group(['middleware' => ['web','auth']], function () {
 	| Mail GET Routes
 	|--------------------------------------------------------------------------
 	*/
-	Route::get('/mailbox', function () {
-		return view('mailbox.mailbox');
-	});
+	Route::get('/mailbox', ['uses'=>'MailController@index','as'=>'get.mail.index']);
 
 	Route::get('/compose', function () {
 		return view('mailbox.compose');

@@ -105,16 +105,19 @@ Mailbox
               <div class="table-responsive mailbox-messages">
                 <table class="table table-hover table-striped">
                   <tbody>
+
+                    @foreach($emails as $email)
                   <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                    <td class="mailbox-name"><a href="/readmail">Alexander Pierce</a></td>
-                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    <td class="mailbox-name"><a href="/readmail">{{$email->sent_from}}</a></td>
+                    <td class="mailbox-subject"><b>{{$email->subject}}</b> - Trying to find a solution to this problem...
                     </td>
                     <td class="mailbox-attachment"></td>
-                    <td class="mailbox-date">5 mins ago</td>
+                    <td class="mailbox-date">{{$email->sent_at}}</td>
                   </tr>
-                  <tr>
+                  @endforeach
+                  <!-- <tr>
                     <td><input type="checkbox"></td>
                     <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
                     <td class="mailbox-name"><a href="/readmail">Alexander Pierce</a></td>
@@ -239,7 +242,7 @@ Mailbox
                     </td>
                     <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
                     <td class="mailbox-date">15 days ago</td>
-                  </tr>
+                  </tr> -->
                   </tbody>
                 </table>
                 <!-- /.table -->

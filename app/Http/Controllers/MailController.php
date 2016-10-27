@@ -24,8 +24,8 @@ class MailController extends Controller
 {
     public function index()
     {
-    	$emails = DB::table('mail')->paginate(25);
+    	$emails = DB::table('portal_mail_mst')->paginate(25);
 
-    	return view('mailbox.readmail', ['mail' => $emails]);
+    	return view('mailbox.mailbox', ['emails' => $emails]);
     }
 }
