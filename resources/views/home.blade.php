@@ -2,7 +2,7 @@
 
 @section('Content')
 <div class="container">
-   <h2>Welcome, Tony!</h2>
+   <h2>Welcome, {{$fname}}!</h2>
 <br>
 <br>
        <div class="row">
@@ -14,7 +14,7 @@
             </a>
           <div class="info-box-content">
             <span class="info-box-text">Messages</span>
-            <span class="info-box-number">4</span>
+            <span class="info-box-number">{{$inboxcount}}</span>
           </div><!-- /.info-box-content -->
 
         </div><!-- /.info-box -->

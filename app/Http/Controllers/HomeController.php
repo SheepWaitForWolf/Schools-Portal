@@ -33,10 +33,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home');
-    }
 
     public function showLogin()
     {
@@ -66,10 +62,12 @@ class HomeController extends Controller
     {
         $inboxcount = 4;
         $childcount = count(DB::table('portal_child_mst')->select('*')->get());
-         //DB::select('SELECT SUBSTRING_INDEX(name, " ", 1) FROM portal_users_mst WHERE email = "big_tony@gmail.com"');
-        $username = DB::table('portal_users_mst')->select('name')->where('email', '=', 'big_tony@gmail.com')->get();
+       
+        $username = json_decode(json_encode(DB::table('portal_users_mst')->select(DB::raw('SUBSTRING_INDEX(name, " ", 1) as firstname'))->where('email', '=', 'big_tony@gmail.com')->get()));
 
-        return view('home')->with('childcount', $childcount)->with('username', $username);
+        $fname = $username[0]->firstname;
+
+        return view('home')->with('childcount', $childcount)->with('inboxcount', $inboxcount)->with('fname', $fname);
     }
 
 }
