@@ -13,9 +13,7 @@ use App\Mail\AccountCreated;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
@@ -49,10 +47,9 @@ Route::group(['middleware' => ['web','auth']], function () {
 
 	Route::get('logout', array('uses' => 'HomeController@logout'));
 
-	Route::get('/home', function () {
-		return view('home');
-	});
+	Route::get('/home', ['uses'=>'HomeController@displayUserInfo','as'=>'get.home.displayUserInfo']);
 
+	Route::get('/', ['uses'=>'HomeController@doLogin','as'=>'get.home.doLogin']);
 	/*
 	|--------------------------------------------------------------------------
 	| Services GET Routes
@@ -145,16 +142,7 @@ Route::group(['middleware' => ['web','auth']], function () {
 	});
 
 
-
-
-
-
-
 });
 
 Auth::routes();
 
-
-
-
-Route::get('/home', 'HomeController@index');
