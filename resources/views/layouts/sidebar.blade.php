@@ -9,7 +9,7 @@
         </div>
         <div class="pull-left info">
           <p>myaccount</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="/home"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- search form -->
@@ -27,7 +27,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="/">
+          <a href="/home">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
