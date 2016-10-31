@@ -41,9 +41,7 @@ Route::group(['middleware' => ['web','auth']], function () {
 		return view('schoolmeals');
 	});
 
-	Route::get('/annualupdate', function () {
-		return view('annualupdate');
-	});
+	Route::get('/annualupdate', ['uses'=>'ServicesController@getChildren','as'=>'get.services.getChildren']);
 
 	Route::get('logout', array('uses' => 'HomeController@logout'));
 

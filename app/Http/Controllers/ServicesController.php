@@ -56,7 +56,11 @@ class ServicesController extends Controller
     }
 
      public function getAnnualUpdatePage() {
-    	return view('annualupdate');
+        $children = Child::all();
+        $authorities = LocalAuthority::all();
+        $absences = Absence::all();
+
+    	return view('annualupdate')->with('children', $children)->with('authorities', $authorities);
     }
 
      public function getResultsPage() {
@@ -127,6 +131,7 @@ class ServicesController extends Controller
         $childrecord->dob = $request->dob;
         $childrecord->class_level = $request->class_level;
         $childrecord->school = $request->school;
+        $childrecord->local_authority_id = $request->local_authority_id;
         $childrecord->save();
 
         // return $this->getChildren();
