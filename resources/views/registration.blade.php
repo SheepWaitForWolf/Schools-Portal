@@ -29,7 +29,7 @@ Register Children
         <ul class="list-unstyled">
           <li>Date of Birth : {{ $child->dob}} </li>
           <li>Gender : {{ $child->gender}}</li>
-          <li>School : {{ $child->school_id}} </li>
+          <li>School : {{ $child->school}} </li>
           <li>Class : {{ $child->class_level}}</li>
           <li>Attendance : </li>
         </ul>
@@ -48,6 +48,33 @@ Register Children
 @endsection
 
 @section('Form')
+
+<script>
+function changela(val) {
+
+
+var request = $.ajax({
+      url: "{!! URL::route('get.services.getSchools')!!}",
+      type: "GET", 
+      data: {d : val},     
+      dataType: "json"
+    });
+
+
+    request.done(function(msg) {
+
+      $('#fillable').empty();
+      for (var i in msg) {
+      $('#fillable').append("<option value=" + msg[i].school_name + ">" + msg[i].school_name + "</option>");
+      }
+    });
+
+    request.fail(function(jqXHR, textStatus) {
+      alert( "Request failed: " + textStatus );
+    });
+  }
+  </script>
+
 <div class="row">
   <div class="col-lg-2">
   </div>
@@ -82,6 +109,31 @@ Register Children
       </div>
         <br>
       </div>
+          <div class="form-group">
+      <label for="la" class="col-lg-2 control-label">Local Authority</label>
+      <div class="col-lg-10">
+        <select class="form-control" name="la" id="la" onchange="changela(this.value)">
+          <option value="Choose your Local Authority">Choose your Local Authority</option>
+          @foreach($authorities as $authority)
+          <option value="{{$authority->la_id}}">{{ $authority->la_name }}</option>
+          @endforeach
+        </select>
+      </div>
+    </div>
+       <div class="form-group">
+      <label for="school" class="col-lg-2 control-label">School</label>
+      <div class="col-lg-10">
+        <select selected="true" class="form-control" name="school" id="fillable" >
+          <option value="Choose your School">Choose your School</option>
+        </select>
+      </div>
+    </div>
+     <div class="form-group">
+      <label for="class_level" class="col-lg-2 control-label">Class</label>
+      <div class="col-lg-10">
+        <input type="text" name="class_level" class="form-control" id="class_level" placeholder="S1">
+      </div>
+    </div>
        <div class="form-group">
       <div class="col-lg-10">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">

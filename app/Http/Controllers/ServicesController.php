@@ -19,14 +19,17 @@ use Response;
 use DB;
 use Log;
 
+
 class ServicesController extends Controller
 {
     
 
 	public function getChildren() {
         $children = Child::all();
+        $authorities = LocalAuthority::all();
+        $absences = Absence::all();
 
-        return view('registration')->with('children', $children);
+        return view('registration')->with('children', $children)->with('authorities', $authorities);
     }
 
 
@@ -122,7 +125,8 @@ class ServicesController extends Controller
         $childrecord->l_name = $request->l_name;
         $childrecord->gender = $request->gender;
         $childrecord->dob = $request->dob;
-
+        $childrecord->class_level = $request->class_level;
+        $childrecord->school = $request->school;
         $childrecord->save();
 
         // return $this->getChildren();
