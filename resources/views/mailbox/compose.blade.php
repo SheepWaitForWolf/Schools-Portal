@@ -34,7 +34,8 @@
               <ul class="nav nav-pills nav-stacked">
                 <li><a href="/mailbox"><i class="fa fa-inbox"></i> Inbox
                   <span class="label label-primary pull-right">12</span></a></li>
-                <li><a href="/outbox"><i class="fa fa-envelope-o"></i> Sent</a></li>
+                <li><a href="/outbox"><i class="fa fa-envelope-o"></i> Sent
+                 <span class="label label-danger pull-right">16</span></a></li>
                 <li><a href="/drafts"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                 <li><a href="/junk"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a>
                 </li>
