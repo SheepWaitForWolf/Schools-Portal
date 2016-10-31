@@ -34,10 +34,11 @@ Mailbox
             <div class="box-body no-padding">
               <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="/mailbox"><i class="fa fa-inbox"></i> Inbox
-                  <span class="label label-primary pull-right">12</span></a></li>
-                <li><a href="/outbox"><i class="fa fa-envelope-o"></i> Sent</a></li>
+                  <span class="label label-success pull-right">13</span></a></li>
+                <li><a href="/outbox"><i class="fa fa-envelope-o"></i> Sent
+                 <span class="label label-danger pull-right">16</span></a></li>
                 <li><a href="/drafts"><i class="fa fa-file-text-o"></i> Drafts</a></li>
-                <li><a href="/junk"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a>
+                <li><a href="/junk"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">24</span></a>
                 </li>
                 <li><a href="/trash"><i class="fa fa-trash-o"></i> Trash</a></li>
               </ul>
@@ -95,8 +96,7 @@ Mailbox
                 <div class="pull-right">
                   1-20/200
                   <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                  {{ $emails->links() }}
                   </div>
                   <!-- /.btn-group -->
                 </div>
@@ -140,14 +140,14 @@ Mailbox
                 <div class="pull-right">
                   1-20/200
                   <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                               {{ $emails->links() }}
                   </div>
                   <!-- /.btn-group -->
                 </div>
                 <!-- /.pull-right -->
               </div>
             </div>
+
           </div>
           <!-- /. box -->
         </div>
